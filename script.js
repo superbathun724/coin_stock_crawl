@@ -5,7 +5,7 @@ async function loadCrypto() {
     const res = await fetch(`${API_BASE}/api/crypto`);
     if (!res.ok) throw new Error("Crypto fetch failed");
     const data = await res.json();
-    console.log("💰 Crypto data:", data);  // 디버깅 로그
+    console.log("💰 Crypto data:", data);
 
     const container = document.getElementById("crypto-data");
     container.innerHTML = Object.entries(data)
@@ -28,7 +28,7 @@ async function loadStock() {
     const res = await fetch(`${API_BASE}/api/stocks/AAPL`);
     if (!res.ok) throw new Error("Stock fetch failed");
     const data = await res.json();
-    console.log("📈 Stock data:", data);  // 디버깅 로그
+    console.log("📈 Stock data:", data);
 
     const container = document.getElementById("stock-data");
     container.innerHTML = data
